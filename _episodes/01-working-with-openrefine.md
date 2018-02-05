@@ -30,7 +30,7 @@ OpenRefine can import a variety of file types, including tab separated (`tsv`), 
 
 In this first step, we'll browse our computer to the sample data file for this lesson. In this case, I have partially cleaned up a very simple dataset of Barnum and London Circus stops from 1881-1890. The original data I used can be found on the [Circus Historical Society Barnum Route from 1881-1890 page](http://www.circushistory.org/Routes/PTB1881.htm).
 
-Instead of downloading the data, we are going to grab it straight from the CSV file that I put in my GitHub repository for this workshop. You can get a [preview of the data](https://github.com/kristindawn/DC_OpenRefineTufts/blob/gh-pages/files/PTB1881_wyear.csv) in GitHub. Take a look and see if you notice anything specific about the data. When you are ready, the URL for the dataset that we are going to copy into OpenRefine is: 'https://raw.githubusercontent.com/kristindawn/DC_OpenRefineTufts/gh-pages/files/PTB1881_wyear.csv'
+Instead of downloading the data, we are going to grab it straight from the CSV file that I put in my GitHub repository for this workshop. You can get a [preview of the data](https://github.com/kristindawn/DC_OpenRefineTufts/blob/gh-pages/files/PTB1881_wyear.csv) in GitHub. Take a look and see if you notice anything specific about the data. When you are ready, the URL for the dataset that we are going to copy into OpenRefine is: ```https://raw.githubusercontent.com/kristindawn/DC_OpenRefineTufts/gh-pages/files/PTB1881_wyear.csv```
 
 
 Once OpenRefine is launched in your browser, the left margin has options to `Create Project`, `Open Project`, or `Import Project`. Here we will create a new project:
