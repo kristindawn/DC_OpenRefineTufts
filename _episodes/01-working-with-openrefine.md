@@ -71,13 +71,13 @@ along with a number representing how many times that value occurs in the column.
 {: .solution}
 
 > ## Exercise
->
+
 > 1. Using faceting, look at the YEAR column.  
->
+
 > 2. Is the column formatted as Number, Date, or Text? How does changing the format change the faceting display?
->
+
 > 3. Which years have the most and least observations?
-> 
+
 > > ## Solution
 > > 
 > > 1. For the column `YEAR` do `Facet` > `Text facet`. A box will appear in the left panel showing that there are 10 unique entries in
@@ -113,7 +113,7 @@ can do to fix this?
 
 {: .solution}
 
-*PRO TIP:* Sometimes editing is a lot of trial an error. Don't be discouraged if it isn't quite right the first time. 
+**PRO TIP:** Sometimes editing is a lot of trial an error. Don't be discouraged if it isn't quite right the first time. 
 
 > ## Exercise
 >
