@@ -7,7 +7,7 @@ questions:
 - "How can we sort and summarize our data?"
 - "How can we find and correct errors in our raw data?"
 objectives:
-- "Create a new OpenRefine project from a CSV file."
+- "Create a new OpenRefine project from a CSV file on the web."
 - "Recall what facets are and how they are used to sort and summarize data."
 - "Recall what clustering is and how it is applied to group and edit typos."
 - "Manipulate data using previous steps with undo/redo."
@@ -35,13 +35,12 @@ Instead of downloading the data, we are going to grab it straight from the CSV f
 
 Once OpenRefine is launched in your browser, the left margin has options to `Create Project`, `Open Project`, or `Import Project`. Here we will create a new project:
 
-1. click `Create Project` and select `Get data from` `This Computer`.  
-2. Click `Choose Files` and select the file `Portal_rodents_19772002_scinameUUIDs.csv`. Click `Open` or double-click on the filename.
-3. Click `Next>>` under the browse button to upload the data into OpenRefine.  
-4. OpenRefine gives you a preview - a chance to show you it understood the file. If, for example, your file was really tab-delimited, the preview might look strange, you would choose the correct separator in the box shown and click `Update Preview` (bottom left). If this is the wrong file, click `<<Start Over` (upper left).  
-5. If all looks well, click `Create Project>>` (upper right). 
+1. click `Create Project` and select `Get data from` `Web Addresses (URLs)`. This won't work for all URLs, but you can always test it and see.  
+2. Click `Next>>` under the browse button to upload the data into OpenRefine.  
+3. OpenRefine gives you a preview - a chance to show you it understood the file. If, for example, your file was really tab-delimited, the preview might look strange, you would choose the correct separator in the box shown and click `Update Preview` (bottom left). If this is the wrong file, click `<<Start Over` (upper left).  
+4. If all looks well, change the `Project name` at the top to `PTB1881-1890`. Click `Create Project>>` (upper right next to the `Project name` box). 
 
-Note that at step 1, you could upload data in a standard form from a web address by selecting `Get data from` `Web Addresses (URLs)`. However, this won't work for all URLs.
+Note that at step 1, you could upload data from a file on your computer. The rest of the steps are the same.
 
 ## Faceting
 
@@ -56,26 +55,24 @@ Typically, you create a facet on a particular column. The facet summarizes the c
 
 [More on faceting](https://github.com/OpenRefine/OpenRefine/wiki/Faceting)
 
-Here we will use faceting to look for potential errors in data entry in the `scientificName` column.
+Here we will use faceting to look for potential errors in data entry in the `Month` column.
 
-1. Scroll over to the `scientificName` column.
+1. Scroll over to the `Month` column.
 2. Click the down arrow and choose `Facet` > `Text facet`.
-3. In the left panel, you'll now see a box containing every unique value in the `scientificName` column 
+3. In the left panel, you'll now see a box containing every unique value in the `Month` column 
 along with a number representing how many times that value occurs in the column.
 4. Try sorting this facet by name and by count. Do you notice any problems with the data? What are they?
 5. Hover the mouse over one of the names in the `Facet` list. You should see that you have an `edit` function available. 
-6. You could use this to fix an error immediately, and OpenRefine will ask whether you want to make the same correction to every value it finds like that one. But OpenRefine offers even better ways to find and fix these errors, which we'll use instead. We'll learn about these when we talk about clustering.
+6. You could use this to fix an error immediately, and OpenRefine will ask whether you want to make the same correction to every value it finds like that one. Since there aren't too many errors here, you can go ahead an fix the errors you find. 
 
 > ## Solution
 > 
-> There will be several near-identical entries in `scientificName`. For example, there is one entry for `Ammospermophilis harrisi` and
-> one entry for `Ammospermophilus harrisii`. These are both misspellings of `Ammospermophilus harrisi`. We will see how to correct these 
-> misspelled and mistyped entries in a later exercise.  
+> There will be one year where June is incorrectly abbreviated as Jun and one misspelling of October. In the end, there should be 8 months in the facet - April through November.   
 {: .solution}
 
 > ## Exercise
 >
-> 1. Using faceting, find out how many years are represented in the census.  
+> 1. Using faceting, look at the YEAR column.  
 >
 > 2. Is the column formatted as Number, Date, or Text? How does changing the format change the faceting display?
 >
@@ -83,17 +80,53 @@ along with a number representing how many times that value occurs in the column.
 > 
 > > ## Solution
 > > 
-> > 1. For the column `yr` do `Facet` > `Text facet`. A box will appear in the left panel showing that there are 26 unique entries in
+> > 1. For the column `YEAR` do `Facet` > `Text facet`. A box will appear in the left panel showing that there are 10 unique entries in
 > > this column.  
-> > 2. By default, the column `yr` is formatted as Text. You can change the format by doing `Edit cells` > `Common transforms` > 
-> > `To number`. Doing `Facet` > `Numeric facet` creates a box in the left panel that shows a histogram of the number of 
-> > entries per year. Notice that the data is shown as a number, not a date. If you instead transform the column to a date, the 
-> > program will assume all entries are on January 1st of the year.   
+> > 2. By default, the column `YEAR` is formatted as Text - you can tell this by the fact that the values are in black. You can change the 
+> >format by doing `Edit cells` > `Common transforms` > `To number`. Doing `Facet` > `Numeric facet` creates a box in the left panel that
+> >shows a histogram of the number of entries per year. Notice that the data is shown as a number, not a date.
+> >DO NOT DO THIS BUT: If you instead transform the column to a date, the program will assume all entries are on January 1st of the year.   
 > > 3. After creating a facet, click `Sort by count` in the facet box. The year with the most observations is 1997. The least is 1977. 
 > > 
 > {: .solution}
 {: .challenge}
 
+## Split
+*Creating multiple columns from one based on a particular character*
+
+If data in a column needs to be split into multiple columns, and the parts are separated by a common separator (say a comma or a space), you can use that separator to divide up the pieces into their own columns.
+
+
+1. We want to split the `Route Date` column into separate colums for the date and the location. 
+2. Click the down arrow at the top of the `Route Date` column. Choose `Edit Column` > `Split into several columns...`
+3. In the pop-up, in the `Separator` box, replace the comma with a space.
+4. Uncheck the box that says `Remove this column`. This will leave the original column. It is always good to have this information to go back to.
+5. Click `OK`. You'll get some new columns called `Route Date 1`, `Route Date 2`, and so on.
+6. Notice that in some cases there are columns for `Route Date 3` and `Route Date 4`. Why is this? What do you think we 
+can do to fix this?
+
+> ## Solution
+> 
+> The entries that have data in `Route Date 3` and `Route Date 4` had place names with spaces in them. We _could_ fix these manually but 
+> if we had more data we would definitely want to find a better way to split the columns. One options is to use the `by field lengths` 
+> option in the `Split` menu. You can use
+
+{: .solution}
+
+*PRO TIP:* Sometimes editing is a lot of trial an error. Don't be discouraged if it isn't quite right the first time. 
+
+> ## Exercise
+>
+> Try to change the name of the second new column to "species". How can you correct the problem you encounter?
+> 
+> > ## Solution
+> > 
+> > On the `scientificName 2` column, click the down arrow and then `Edit column` > `Rename this column`. Type "species" into the box
+> > that appears. A pop-up will appear that says `Another column already named species`. This is because there is another column
+> > where we've recorded the species abbreviation. You can choose another name like `speciesName` for this column or change the other 
+> > `species` column you can change the name to `speciesAbbreviation`.
+> {: .solution}
+{: .challenge}
 ## Clustering
 
 In OpenRefine, clustering means "finding groups of different values that might be alternative representations of the same thing". For example, the two strings `New York` and `new york` are very likely to refer to the same concept and just have capitalization differences. Likewise, `Gödel` and `Godel` probably refer to the same person. Clustering is a very powerful tool for cleaning datasets which contain misspelled or mistyped entries. OpenRefine has several clustering algorithms built in. Experiment with them, and learn more about these algorithms and how they work. 
@@ -112,40 +145,7 @@ your solutions for later exercises will not be the same as shown in those exerci
 
 [More on clustering](https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth)
 
-## Split
 
-
-If data in a column needs to be split into multiple columns, and the parts are separated by a common separator (say a comma, or a space), you can use that separator to divide up the pieces into their own columns.
-
-
-1. Let us suppose we want to split the `scientificName` column into separate colums for genus and for species. 
-2. Click the down arrow at the top of the `scientificName` column. Choose `Edit Column` > `Split into several columns...`
-3. In the pop-up, in the `Separator` box, replace the comma with a space.
-4. Uncheck the box that says `Remove this column`.
-5. Click `OK`. You'll get some new columns called `scientificName 1`, `scientificName 2`, and so on.
-6. Notice that in some cases `scientificName 1` and `scientificName 2` are empty. Why is this? What do you think we 
-can do to fix this?
-
-> ## Solution
-> 
-> The entries that have data in `scientificName 3` and `scientificName 4` but not the first two `scientificName` columns 
-> had an extra space at the beginning of the entry. Leading white spaces are very difficult to notice when cleaning data
-> manually. This is another advantage of using OpenRefine to clean your data. We'll look at how to 
-> fix leading and trailing white spaces in a later exercise.
-{: .solution}
-
-> ## Exercise
->
-> Try to change the name of the second new column to "species". How can you correct the problem you encounter?
-> 
-> > ## Solution
-> > 
-> > On the `scientificName 2` column, click the down arrow and then `Edit column` > `Rename this column`. Type "species" into the box
-> > that appears. A pop-up will appear that says `Another column already named species`. This is because there is another column
-> > where we've recorded the species abbreviation. You can choose another name like `speciesName` for this column or change the other 
-> > `species` column you can change the name to `speciesAbbreviation`.
-> {: .solution}
-{: .challenge}
 
 ## Undo / Redo
 
