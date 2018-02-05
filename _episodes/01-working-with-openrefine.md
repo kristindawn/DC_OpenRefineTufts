@@ -28,10 +28,10 @@ Launch OpenRefine (see [Getting Started with OpenRefine](http://www.datacarpentr
 
 OpenRefine can import a variety of file types, including tab separated (`tsv`), comma separated (`csv`), Excel (`xls`, `xlsx`), JSON, XML, RDF as XML, Google Spreadsheets. See the [OpenRefine Importers page](https://github.com/OpenRefine/OpenRefine/wiki/Importers) for more information.
 
-In this first step, we'll browse our computer to the sample data file for this lesson. In this case, we modified the `Portal_rodents` CSV file, adding several columns: `scientificName`, `locality`, `county`, `state`, `country` and generating several more columns in the lesson itself (`JSON`, `decimalLatitude`, `decimalLongitude`). Data in `locality`, `county`, `country`, `JSON`, `decimalLatitude` and `decimalLongitude` are contrived and are in no way related to the original dataset. 
+In this first step, we'll browse our computer to the sample data file for this lesson. In this case, I have partially cleaned up a very simple dataset of Barnum and London Circus stops from 1881-1890. The original data I used can be found on the [Circus Historical Society Barnum Route from 1881-1890 page](http://www.circushistory.org/Routes/PTB1881.htm).
 
-If you haven't already, download the data from:  
-[https://ndownloader.figshare.com/files/7823341](https://ndownloader.figshare.com/files/7823341)
+Instead of downloading the data, we are going to grab it straight from the CSV file that I put in my GitHub repository for this workshop. You can get a [preview of the data](https://github.com/kristindawn/DC_OpenRefineTufts/blob/gh-pages/files/PTB1881_wyear.csv) in GitHub. Take a look and see if you notice anything specific about the data. When you are ready, the URL for the dataset that we are going to copy into OpenRefine is: 'https://raw.githubusercontent.com/kristindawn/DC_OpenRefineTufts/gh-pages/files/PTB1881_wyear.csv'
+
 
 Once OpenRefine is launched in your browser, the left margin has options to `Create Project`, `Open Project`, or `Import Project`. Here we will create a new project:
 
