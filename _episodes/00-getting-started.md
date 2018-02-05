@@ -29,14 +29,14 @@ keypoints:
 
 Note: this is a Java program that runs on your machine (not in the cloud). It runs inside your browser, but no web connection is needed.
 
-Follow the [Setup](../setup/) instructions to install OpenRefine.
+Follow the [Setup](../setup/) instructions to install OpenRefine. If you are using a Data Lab computer, it should be installed. Search for OpenRefine if you can't find it in the menu.
 
 If after installation and running OpenRefine, it does not automatically open for you, point your browser at http://127.0.0.1:3333/ or http://localhost:3333 to launch the program.
 
 
 ## Basics of OpenRefine
 
-You can find out a lot more about OpenRefine at [http://openrefine.org](http://openrefine.org) and check out some great introductory videos. There is a [Google Group](https://groups.google.com/forum/?hl=en#!forum/openrefine) that can answer a lot of beginner questions and problems. There is also an [OpenRefine Google Plus community](https://plus.google.com/communities/117280693504889048168) where you can find a lot of help and a lot of folks from the life sciences are members. As with other programs of this type, OpenRefine libraries are available too, where you can find a script you need and copy it into your OpenRefine instance to run it on your dataset.
+You can find out a lot more about OpenRefine at [http://openrefine.org](http://openrefine.org) and check out some great introductory videos. We will be using the Google Refine Expression Language (GREL) today and there is an excellent [guide here](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Functions). There is a [Google Group](https://groups.google.com/forum/?hl=en#!forum/openrefine) that can answer a lot of beginner questions and problems. There is also an [OpenRefine Google Plus community](https://plus.google.com/communities/117280693504889048168) where you can find a lot of help and a lot of folks from the life sciences are members. As with other programs of this type, OpenRefine libraries are available too, where you can find a script you need and copy it into your OpenRefine instance to run it on your dataset.
 
 
 ## Features
