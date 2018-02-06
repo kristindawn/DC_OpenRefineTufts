@@ -16,3 +16,28 @@ keypoints:
 ---
 
 # Lesson
+
+## Common Transforms.
+
+### Whitespace
+
+Words with spaces at the beginning, end, or with consecutive spaces in the middle, are particularly hard for we humans to tell from strings without, but the blank characters will make a difference to the computer. We usually want to remove these. OpenRefine provides a tool to remove blank characters from the beginning and end, `Trim leading and trailing whitespace`, and multliple spaces in the middle,`Collapse consecutive whitespace` of any entries that have them. We don't have any of these in this exercise, but it is a useful tool to know about.  
+
+>## Optional Exercise
+> 1. In the header for the column `City`, choose `Edit cells` > `Common transforms` > `Trim leading and trailing whitespace`.
+> 2. It will show that there were 0 columns edited. It does not hurt to do this as a general step in your data cleanup, as it could save you a > lot of grief later.
+{: .challenge}
+
+
+### Case
+
+Case matters in OpenRefine, and this can cause problems when you have messy data with lots of inconsistencies. OpenRefine offer you three options in the common tranforms to chance the case of entire columns of data; `To titlecase`, `To uppercase`, and `To lowercase`. 
+
+Titlecase is probably the least commonly used, and will capitalize each word. To uppercase and to lowercase change text to all capitals or all lowercase.
+
+>## Exercise
+> We are going to use the `To uppercase` to make all of the states all capitals.
+> 1. Click on the down arrow in the `State` column heading. Choose `Edit cells` > `Common transforms` > `To uppercase`.
+> 2. What do you notice about the faceted list of states? Did anything change? It is fine if nothing did.
+{: .challenge}
+
