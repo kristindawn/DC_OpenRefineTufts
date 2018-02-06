@@ -67,10 +67,11 @@ along with a number representing how many times that value occurs in the column.
 
 >## Solution
 >
-> There will be one year where June is incorrectly abbreviated as Jun and one misspelling of October. In the end, there should be 8 months in the facet - April through November.   
+> There will be one year where June is incorrectly abbreviated as Jun and one misspelling of October. In the end, there should be 8 months >in the facet - April through November.   
 {: .solution}
 
 >## Exercise
+>
 > 1. Using faceting, look at the YEAR column.  
 > 2. Is the column formatted as Number, Date, or Text? How does changing the format change the faceting display?
 > 3. Which years have the most and least observations?
@@ -96,9 +97,11 @@ If data in a column needs to be split into multiple columns, and the parts are s
 1. We want to split the `Route Date` column into separate colums for the date and the location using the space after the date as the separator. 
 
 **What could go wrong with this?** 
-## Solution
+
+>## Solution
 > Some of the place names, like "New York" have a space in the name of the city. If we let OpenRefine split it _without_ indicating how many >columns we want, it will split it as many times as it can. Since we know we only want it to split it into two columns, the date and the >place, we can indicated that before we ask it to split it.
 {: .solution}
+
 2. Click the down arrow at the top of the `Route Date` column. Choose `Edit Column` > `Split into several columns...`
 3. In the pop-up, in the `Separator` box, replace the comma with a space. 
 4. Where it says `Split into`, type in 2; this will limit the number of columns to 2 instead of as many as OpenRefine can make.
@@ -138,6 +141,7 @@ your solutions for later exercises will not be the same as shown in those exerci
 It's common while exploring and cleaning a dataset to discover after you've made a change that you really should have done something else first. OpenRefine provides `Undo` and `Redo` operations to make this easy. We are not going to do this right now, but if you want to try it later you can use the steps in the Solution below.
 
 >## Solution
+>
 >1. Click where it says `Undo / Redo` on the left side of the screen. All the changes you have made so far are listed here.
 >2. Click on the step that you want to go back to, in this case the previous step. The added columns will disappear.
 >3. Notice that you can still click on the last step and make the columns reappear, and toggle back and forth between these states.
