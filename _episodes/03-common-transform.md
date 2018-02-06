@@ -47,7 +47,7 @@ In addition to the common transforms that OpenRefine has provided, you can also 
 
 We will be focusing on the `String Functions`, which are outline in the [GREL documentation](https://github.com/OpenRefine/OpenRefine/wiki/GREL-String-Functions). There are also functions for the other data types, including `Math`, `Date`, and `Boolean` data (just to name a few).
 
-A few tips for using the `Edit cells` > `Transform` window:
+A few tips for using the `Edit cells` > `Transform...` window:
 
 * The "value" is the data in the column that you opened the transform from. 
 * Data from other columns can be included in an expression using: `cells["COLUMN NAME"].value`.
@@ -56,5 +56,13 @@ A few tips for using the `Edit cells` > `Transform` window:
 
 >## Exercise
 > We are going to get rid of all of the `.` in the state column by replacing them with nothing.
-> 1. Click on the down arrow in the `State` column, choose
+> 1. Click on the down arrow in the `State` column, choose `Edit cells` > `Transform...`.
+> 2. In the Transform window, make sure that the `Language` is set to `Google Refine Expression Language (GREL)`. You can also use Python/Jython or Clojure, but today we will use GREL. 
+> 3. Currently, the `Preview` of the data looks like the original data; this will change as we right our expression.
+> 4. We are going to use the `replace` function to remove the `.`s. Replace needs 3 strings to work: the input (in our case this will be `value`), the string to be replaced (`"."`), and the string you want replace it with (`""`). So, our full expression will be: ``replace(value, ".", "")``
+> 5. Make sure that the preview matches what you expect (example `D.T.` becomes `DT`). The `On error` should be set to `keep original` to reduce the need to bring together columns later.
+> 6. Click `OK`. 
+{: .challenge}
+
+
 
