@@ -97,41 +97,31 @@ along with a number representing how many times that value occurs in the column.
 If data in a column needs to be split into multiple columns, and the parts are separated by a common separator (say a comma or a space), you can use that separator to divide up the pieces into their own columns.
 
 
-1. We want to split the `Route Date` column into separate colums for the date and the location. 
-2. Click the down arrow at the top of the `Route Date` column. Choose `Edit Column` > `Split into several columns...`
-3. In the pop-up, in the `Separator` box, replace the comma with a space.
-4. Uncheck the box that says `Remove this column`. This will leave the original column. It is always good to have this information to go back to.
-5. Click `OK`. You'll get some new columns called `Route Date 1`, `Route Date 2`, and so on.
-6. Notice that in some cases there are columns for `Route Date 3` and `Route Date 4`. Why is this? What do you think we 
-can do to fix this?
+1. We want to split the `Route Date` column into separate colums for the date and the location using the space after the date as the separator. 
 
+**What could go wrong with this?** 
 > ## Solution
 > 
-> The entries that have data in `Route Date 3` and `Route Date 4` had place names with spaces in them. We _could_ fix these manually but 
-> if we had more data we would definitely want to find a better way to split the columns. One options is to use the `by field lengths` 
-> option in the `Split` menu. You can use
-
+> Some of the place names, like "New York" have a space in the name of the city. If we let OpenRefine split it _without_ indicating how many columns we want, it will split it as many times as it can. Since we know we only want it to split it into two columns, the date and the place, we can indicated that before we ask it to split it.
 {: .solution}
+2. Click the down arrow at the top of the `Route Date` column. Choose `Edit Column` > `Split into several columns...`
+3. In the pop-up, in the `Separator` box, replace the comma with a space. 
+4. Where it says `Split into`, type in 2; this will limit the number of columns to 2 instead of as many as OpenRefine can make.
+5. **Uncheck the box that says `Remove this column`.** This will leave the original column. It is always good to have this information to go back to.
+6. Click `OK`. You'll get two new columns called `Route Date 1` and `Route Date 2`. 
 
-**PRO TIP:** Sometimes editing is a lot of trial an error. Don't be discouraged if it isn't quite right the first time. 
+**What do you notice about the new columns?**
 
-> ## Exercise
->
-> Try to change the name of the second new column to "species". How can you correct the problem you encounter?
-> 
-> > ## Solution
-> > 
-> > On the `scientificName 2` column, click the down arrow and then `Edit column` > `Rename this column`. Type "species" into the box
-> > that appears. A pop-up will appear that says `Another column already named species`. This is because there is another column
-> > where we've recorded the species abbreviation. You can choose another name like `speciesName` for this column or change the other 
-> > `species` column you can change the name to `speciesAbbreviation`.
-> {: .solution}
-{: .challenge}
+7. Click on the down arrow for each of the new columns, choose `Edit column` > `Rename Column`. Name the columns with the dates `Date` and the columns with the cities `Location`.
+8. Repeat this process for the new `Location` column to split the city and State. This will help us clean up the list, as most of the incosistencies exist with the way that the states have been entered.
+
+**PRO TIP:** If you can use a standard way of representing something, do it. In this case, we will be using the International Standards Organization (ISO) Standard for the 2 letter state codes. This sounds intense, but you can find all of the [information on Wikipedia](https://en.wikipedia.org/wiki/ISO_3166-2:US) and you will find that they are very familiar. Using a standard like this will make it easier for others to use your data. 
+
 ## Clustering
 
 In OpenRefine, clustering means "finding groups of different values that might be alternative representations of the same thing". For example, the two strings `New York` and `new york` are very likely to refer to the same concept and just have capitalization differences. Likewise, `Gödel` and `Godel` probably refer to the same person. Clustering is a very powerful tool for cleaning datasets which contain misspelled or mistyped entries. OpenRefine has several clustering algorithms built in. Experiment with them, and learn more about these algorithms and how they work. 
 
-1. In the `scientificName` Text Facet we created in the step above, click the `Cluster` button.
+1. In the `Location` Text Facet we created in the step above, click the `Cluster` button.
 2. In the resulting pop-up window, you can change the `Method` and the `Keying Function`. Try different combinations to 
  see what different mergers of values are suggested.
 3. Select the `key collision` method and `metaphone3` keying function. It should identify three clusters. 
