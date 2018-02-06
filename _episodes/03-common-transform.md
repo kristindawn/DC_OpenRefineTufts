@@ -41,3 +41,20 @@ Titlecase is probably the least commonly used, and will capitalize each word. To
 > 2. What do you notice about the faceted list of states? Did anything change? It is fine if nothing did.
 {: .challenge}
 
+## Transforms
+
+In addition to the common transforms that OpenRefine has provided, you can also write short expressions using the Google Refine Expression Language (or GREL). We will use transforms to keep cleaning up the `State` field.
+
+We will be focusing on the `String Functions`, which are outline in the [GREL documentation](https://github.com/OpenRefine/OpenRefine/wiki/GREL-String-Functions). There are also functions for the other data types, including `Math`, `Date`, and `Boolean` data (just to name a few).
+
+A few tips for using the `Edit cells` > `Transform` window:
+
+* The "value" is the data in the column that you opened the transform from. 
+* Data from other columns can be included in an expression using: `cells["COLUMN NAME"].value`.
+* The preview is key to identifying possible problems. It only shows an example of the data, but you should be able to get a sense of whether the result is what you want.
+* The `History` tab will become your best friend. It allows you to reuse expressions that you have used in your OpenRefine environment, regardless of the project.
+
+>## Exercise
+> We are going to get rid of all of the `.` in the state column by replacing them with nothing.
+> 1. Click on the down arrow in the `State` column, choose
+
