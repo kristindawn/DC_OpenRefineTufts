@@ -70,11 +70,10 @@ along with a number representing how many times that value occurs in the column.
 > There will be one year where June is incorrectly abbreviated as Jun and one misspelling of October. In the end, there should be 8 months in the facet - April through November.   
 {: .solution}
 
-## Exercise
+>## Exercise
 > 1. Using faceting, look at the YEAR column.  
 > 2. Is the column formatted as Number, Date, or Text? How does changing the format change the faceting display?
 > 3. Which years have the most and least observations?
-
 > > ## Solution
 > > 
 > > 1. For the column `YEAR` do `Facet` > `Text facet`. A box will appear in the left panel showing that there are 10 unique entries in
@@ -98,7 +97,7 @@ If data in a column needs to be split into multiple columns, and the parts are s
 
 **What could go wrong with this?** 
 ## Solution
-> Some of the place names, like "New York" have a space in the name of the city. If we let OpenRefine split it _without_ indicating how many columns we want, it will split it as many times as it can. Since we know we only want it to split it into two columns, the date and the place, we can indicated that before we ask it to split it.
+> Some of the place names, like "New York" have a space in the name of the city. If we let OpenRefine split it _without_ indicating how many >columns we want, it will split it as many times as it can. Since we know we only want it to split it into two columns, the date and the >place, we can indicated that before we ask it to split it.
 {: .solution}
 2. Click the down arrow at the top of the `Route Date` column. Choose `Edit Column` > `Split into several columns...`
 3. In the pop-up, in the `Separator` box, replace the comma with a space. 
@@ -120,9 +119,10 @@ In OpenRefine, clustering means "finding groups of different values that might b
 1. In the `Location` Text Facet we created in the step above, click the `Cluster` button.
 2. In the resulting pop-up window, you can change the `Method` and the `Keying Function`. Try different combinations to 
  see what different mergers of values are suggested.
-3. Select the `key collision` method and `metaphone3` keying function. It should identify three clusters. 
-4. Click the `Merge?` box beside each, then click `Merge Selected and Recluster` to apply the corrections to the dataset.
-4. Try selecting different `Methods` and `Keying Functions` again, to see what new merges are suggested. You may find there are 
+3. Select the `key collision` method and `fingerprint` keying function. It should identify eight clusters. 
+4. Go through the list, putting the ISO two-letter code for each state in the `New Cell Value`. Click the `Merge?` box beside each one.
+5. Click `Merge Selected and Recluster` to apply the corrections to the dataset.
+6. Try selecting different `Methods` and `Keying Functions` again, to see what new merges are suggested. You may find there are 
  still improvements that can be made, but don't `Merge` again; just `Close` when you're done.  We'll now 
  see other operations that will help us detect and correct the remaining problems, and that have other, more general uses.
 
@@ -135,19 +135,19 @@ your solutions for later exercises will not be the same as shown in those exerci
 
 ## Undo / Redo
 
-It's common while exploring and cleaning a dataset to discover after you've made a change that you really should have done something else first. OpenRefine provides `Undo` and `Redo` operations to make this easy.
+It's common while exploring and cleaning a dataset to discover after you've made a change that you really should have done something else first. OpenRefine provides `Undo` and `Redo` operations to make this easy. We are not going to do this right now, but if you want to try it later you can use the steps in the Solution below.
 
+>## Solution
+>1. Click where it says `Undo / Redo` on the left side of the screen. All the changes you have made so far are listed here.
+>2. Click on the step that you want to go back to, in this case the previous step. The added columns will disappear.
+>3. Notice that you can still click on the last step and make the columns reappear, and toggle back and forth between these states.
+>4. Leave the dataset in the state in which the `scientificNames` were clustered, but not yet split.
+{: .solution}
 
-1. Click where it says `Undo / Redo` on the left side of the screen. All the changes you have made so far are listed here.
-2. Click on the step that you want to go back to, in this case the previous step. The added columns will disappear.
-3. Notice that you can still click on the last step and make the columns reappear, and toggle back and forth between these states.
-4. Leave the dataset in the state in which the `scientificNames` were clustered, but not yet split.
+## Common Transforms.
+### Trim Leading and Trailing Whitespace
 
-Important: If you skip this step, your solutions for later exercises will not be the same as shown in those exercise solutions.
-
-## Trim Leading and Trailing Whitespace
-
-Words with spaces at the beginning or end are particularly hard for we humans to tell from strings without, but the blank characters will make a difference to the computer. We usually want to remove these. OpenRefine provides a tool to remove blank characters from the beginning and end of any entries that have them.
+Words with spaces at the beginning or end are particularly hard for we humans to tell from strings without, but the blank characters will make a difference to the computer. We usually want to remove these. OpenRefine provides a tool to remove blank characters from the beginning and end of any entries that have them. We don't have any of these in this exercise, but it is a useful tool to know about.  
 
 
 1. In the header for the column `scientificName`, choose `Edit cells` > `Common transforms` > `Trim leading and trailing whitespace`.
