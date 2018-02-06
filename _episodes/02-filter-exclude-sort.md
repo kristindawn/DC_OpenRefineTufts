@@ -74,7 +74,7 @@ If this is your first time sorting this table, then the drop-down menu for the s
 
 > ## Exercise
 >
-> Sort by State. How can you ensure that months are in order?
+> Sort by State. What do you notice?
 {: .challenge}
 
 If you try to re-sort a column that you have already used, the drop-down menu changes slightly, to > `Sort` without the `...`, to remind you that you have already used this column. It will give you additional options:
