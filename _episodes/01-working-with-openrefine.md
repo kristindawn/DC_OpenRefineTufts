@@ -75,6 +75,7 @@ along with a number representing how many times that value occurs in the column.
 > 1. Using faceting, look at the YEAR column.  
 > 2. Is the column formatted as Number, Date, or Text? How does changing the format change the faceting display?
 > 3. Which years have the most and least observations?
+>
 > > ## Solution
 > > 
 > > 1. For the column `YEAR` do `Facet` > `Text facet`. A box will appear in the left panel showing that there are 10 unique entries in
@@ -145,7 +146,6 @@ It's common while exploring and cleaning a dataset to discover after you've made
 >1. Click where it says `Undo / Redo` on the left side of the screen. All the changes you have made so far are listed here.
 >2. Click on the step that you want to go back to, in this case the previous step. The added columns will disappear.
 >3. Notice that you can still click on the last step and make the columns reappear, and toggle back and forth between these states.
->4. Leave the dataset in the state in which the `scientificNames` were clustered, but not yet split.
 {: .solution}
 
 ## Common Transforms.
