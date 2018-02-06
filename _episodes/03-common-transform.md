@@ -1,7 +1,7 @@
 ---
 title: "Common Transforms and Transforms"
 teaching: 10
-exercises: 10
+exercises: 20
 questions:
 - "What are the common transforms and how can they help us?"
 - "How can common transforms help us find and correct common errors."
