@@ -16,11 +16,9 @@ keypoints:
 
 ## Combine columns
 
-Combining columns is not as intuitive as you might expect it to be. We are going to use what we learned about how OpenRefine understands what is in columns 
+Combining columns is not as intuitive as you might expect it to be. We  are going to combine our cleaned up `City` and `State` data to create one column that we can use as the basis for our search using the GeoNames API. To concatenate strings in two columns, we can use the `+`. This also works for other text that we would like to add, which has to be put in `""`. 
 
 >## Exercise
->
-> We are going to combine our cleaned up `City` and `State` data to create one column that we can use as the basis for our search using the GeoNames API. To concatenate strings in two columns, we can use the `+`. This also works for other text that we would like to add, which has to be put in `""`. 
 >
 > 1. Click on the down arrow in the `City` column and choose `Edit column` > `Add column based on this column`.
 > 2. Give the new column the name `City_State`.
@@ -32,4 +30,15 @@ Combining columns is not as intuitive as you might expect it to be. We are going
 > 5. Click `OK` 
 >
 {: .challenge}
+
+## Use existing data to get data from a website
+
+One of the options in the `Edit column` menu is `Add column by fetching URLs...`. We are going to use this to take the column we just created and use it as the basis of a call to the GeoNames API. 
+
+*NOTE:* API stands for application programming interface. I always have to look it up, so I thought I would include it here.
+
+>## Demonstration
+> 1. Click on the down arrow in the `City_State` column and choose `Edit column` > `Add column by fetching URLs...`.
+> 2. **PRO TIP:** 
+
 
