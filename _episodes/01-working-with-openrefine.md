@@ -65,7 +65,8 @@ along with a number representing how many times that value occurs in the column.
 5. Hover the mouse over one of the names in the `Facet` list. You should see that you have an `edit` function available. 
 6. You could use this to fix an error immediately, and OpenRefine will ask whether you want to make the same correction to every value it finds like that one. Since there aren't too many errors here, you can go ahead an fix the errors you find. 
 
-## Solution
+>## Solution
+>
 > There will be one year where June is incorrectly abbreviated as Jun and one misspelling of October. In the end, there should be 8 months in the facet - April through November.   
 {: .solution}
 
