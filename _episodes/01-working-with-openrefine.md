@@ -65,17 +65,13 @@ along with a number representing how many times that value occurs in the column.
 5. Hover the mouse over one of the names in the `Facet` list. You should see that you have an `edit` function available. 
 6. You could use this to fix an error immediately, and OpenRefine will ask whether you want to make the same correction to every value it finds like that one. Since there aren't too many errors here, you can go ahead an fix the errors you find. 
 
-> ## Solution
-> 
+## Solution
 > There will be one year where June is incorrectly abbreviated as Jun and one misspelling of October. In the end, there should be 8 months in the facet - April through November.   
 {: .solution}
 
-> ## Exercise
-
+## Exercise
 > 1. Using faceting, look at the YEAR column.  
-
 > 2. Is the column formatted as Number, Date, or Text? How does changing the format change the faceting display?
-
 > 3. Which years have the most and least observations?
 
 > > ## Solution
@@ -100,8 +96,7 @@ If data in a column needs to be split into multiple columns, and the parts are s
 1. We want to split the `Route Date` column into separate colums for the date and the location using the space after the date as the separator. 
 
 **What could go wrong with this?** 
-> ## Solution
-> 
+## Solution
 > Some of the place names, like "New York" have a space in the name of the city. If we let OpenRefine split it _without_ indicating how many columns we want, it will split it as many times as it can. Since we know we only want it to split it into two columns, the date and the place, we can indicated that before we ask it to split it.
 {: .solution}
 2. Click the down arrow at the top of the `Route Date` column. Choose `Edit Column` > `Split into several columns...`
