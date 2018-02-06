@@ -75,11 +75,11 @@ If this is your first time sorting this table, then the drop-down menu for the s
 > ## Exercise
 >
 > Sort by State. What do you notice?
+>
+> > ## Solution
+> >If you try to re-sort a column that you have already used, the drop-down menu changes slightly, to > `Sort` without the `...`, to remind you that you have already used this column. It will give you additional options:
+> >* `Sort` > `Sort...` - This option enables you to modify your original sort. 
+> >* `Sort` > `Reverse` - This option allows you to reverse the order of the sort.
+> >* `Sort` > `Remove sort` - This option allows you to undo your sort.
+> {: .solution}
 {: .challenge}
-
-If you try to re-sort a column that you have already used, the drop-down menu changes slightly, to > `Sort` without the `...`, to remind you that you have already used this column. It will give you additional options:
-
-* > `Sort` > `Sort...` - This option enables you to modify your original sort. 
-* > `Sort` > `Reverse` - This option allows you to reverse the order of the sort.
-* > `Sort` > `Remove sort` - This option allows you to undo your sort.
-
