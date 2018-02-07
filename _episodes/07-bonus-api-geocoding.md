@@ -25,7 +25,7 @@ Combining columns is not as intuitive as you might expect it to be. We  are goin
 > 3. We want the text from the `City` column (value), the text from the `State` column, and a `, ` in between. Our expression is:
 > >## Solution
 > > ``value  + ", " + cells["State"].value``
-> >{: .solution}
+> {: .solution}
 > 4. Leave the default `set to blank` if the process doesn't work. The preview should show `City, ST`. If it doesn't, check your expression.
 > 5. Click `OK` 
 >
@@ -50,6 +50,12 @@ One of the options in the `Edit column` menu is `Add column by fetching URLs...`
 > ``'http://api.geonames.org/searchJSON?q='+escape(value, 'url')+'&country=&featureClass=P&continentCode=&username=**YOUR USER NAME HERE** &maxRows=1&featureCode='``
 > 6. Click `OK` and wait. 
 
-You should get a 
+You should get a set of data that looks like this:
+``{"totalResultsCount":182,"geonames":[{"adminCode1":"CT","lng":"-72.92816","geonameId":4839366,"toponymName":"New Haven","countryId":"6252001","fcl":"P","population":130322,"countryCode":"US","name":"New Haven","fclName":"city, village,...","countryName":"United States","fcodeName":"populated place","adminName1":"Connecticut","lat":"41.30815","fcode":"PPL"}]}``
 
+## Get the data you need from the JSON (Parse the JSON)
 
+As you can see, the data from GeoNames is structured using JSON. This makes it easy to extract pieces from it using the language parsing capabilities in OpenRefine. This won't work for all kinds of structured data, but luckily JSON is on the list. You can find the functions in the GREL documentation on the [Other Functions](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Other-Functions) page. 
+
+> ## Excercise
+>
