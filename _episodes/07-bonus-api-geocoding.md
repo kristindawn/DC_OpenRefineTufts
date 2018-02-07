@@ -23,9 +23,11 @@ Combining columns is not as intuitive as you might expect it to be. We  are goin
 > 1. Click on the down arrow in the `City` column and choose `Edit column` > `Add column based on this column`.
 > 2. Give the new column the name `City_State`.
 > 3. We want the text from the `City` column (value), the text from the `State` column, and a `, ` in between. Our expression is:
+>
 > >## Solution
 > > ``value  + ", " + cells["State"].value``
-> {: .solution}
+> >{: .solution}
+>
 > 4. Leave the default `set to blank` if the process doesn't work. The preview should show `City, ST`. If it doesn't, check your expression.
 > 5. Click `OK` 
 >
@@ -61,8 +63,10 @@ As you can see, the data from GeoNames is structured using JSON. This makes it e
 > 1. Click the down arrow in the GeoJSON column. Choose `Edit column` > `Add column based on this column`
 > 2. Call the new column `Latitude`. Leave the options below that box as `set to blank`.
 > 3. We are going to use the JSON parsing (`value.parseJson().???`) functionality to create an expression to just get the latitude, stored as `lat` in the column. To do this, we need to tell OpenRefine that we are looking at the first (and only) `geonames` JSON entry for the row and that we want the `lat`. What might this look like?
+>
 > > ## Solution
 > > `value.parseJson().geonames[0].lat`
-> {: .solution}
+> >{: .solution}
+>
 > 4. Now you that you have the latitude, do the same thing for the longitude.
 
