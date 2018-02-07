@@ -51,6 +51,7 @@ One of the options in the `Edit column` menu is `Add column by fetching URLs...`
 > 5. The expression you need is: 
 > ``'http://api.geonames.org/searchJSON?q='+escape(value, 'url')+'&country=&featureClass=P&continentCode=&username=**YOUR USER NAME HERE** &maxRows=1&featureCode='``
 > 6. Click `OK` and wait. 
+{: .challenge}
 
 You should get a set of data that looks like this:
 ``{"totalResultsCount":182,"geonames":[{"adminCode1":"CT","lng":"-72.92816","geonameId":4839366,"toponymName":"New Haven","countryId":"6252001","fcl":"P","population":130322,"countryCode":"US","name":"New Haven","fclName":"city, village,...","countryName":"United States","fcodeName":"populated place","adminName1":"Connecticut","lat":"41.30815","fcode":"PPL"}]}``
@@ -74,4 +75,4 @@ As you can see, the data from GeoNames is structured using JSON. This makes it e
 > > `value.parseJson().geonames[0].lng`
 > {: .solution}
 >
-
+{: .challenge}
