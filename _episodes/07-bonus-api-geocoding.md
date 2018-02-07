@@ -1,6 +1,6 @@
 ---
 title: "Geocoding in OpenRefine using an API"
-teaching: 10
+teaching: 5
 exercises: 0
 questions:
 - "What are other ways to create new data based on a column?"
@@ -33,12 +33,23 @@ Combining columns is not as intuitive as you might expect it to be. We  are goin
 
 ## Use existing data to get data from a website
 
+For this demo I am going to use a spreadsheet that I made that only has the unique cities. The GeoNames API has a limit on the number of items (I think it is 30,000/day, 2,000 per hour), so instead of getting data for over 1200 rows, I have a list of about 520 places to get the latitude and longitude for. [The data are available in the course GitHub repo.](https://raw.githubusercontent.com/kristindawn/DC_OpenRefineTufts/gh-pages/files/Locs_to_GeoCode.csv) 
+
+GeoNames is a great service, but you do have to sign up for a [free account to use the API](http://www.geonames.org/export/). 
+
 One of the options in the `Edit column` menu is `Add column by fetching URLs...`. We are going to use this to take the column we just created and use it as the basis of a call to the GeoNames API. 
 
 *NOTE:* API stands for application programming interface. I always have to look it up, so I thought I would include it here.
 
 >## Demonstration
 > 1. Click on the down arrow in the `City_State` column and choose `Edit column` > `Add column by fetching URLs...`.
-> 2. **PRO TIP:** 
+> 2. Give the column a name of `GeoJSON`. This is going to be an intermediate column just for the GeoJSON data that is returned from GeoNames.
+> 3. **THIS IS VERY IMPORTANT** Change the `Throttle delay` from the default `5000` milliseconds to `200` milliseconds. If you don't do this, it will only ask for a data from a new row every **5 seconds**, instead pf 5 rows every second.
+> 4. Leave the `On error` on `set to blank`. GeoNames will also return its own errors.
+> 5. The expression you need is: 
+> ``'http://api.geonames.org/searchJSON?q='+escape(value, 'url')+'&country=&featureClass=P&continentCode=&username=**YOUR USER NAME HERE** &maxRows=1&featureCode='``
+> 6. Click `OK` and wait. 
+
+You should get a 
 
 
