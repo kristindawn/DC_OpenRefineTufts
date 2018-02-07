@@ -50,7 +50,8 @@ One of the options in the `Edit column` menu is `Add column by fetching URLs...`
 > 4. Leave the `On error` on `set to blank`. GeoNames will also return its own errors.
 > 5. The expression you need is: 
 > ``'http://api.geonames.org/searchJSON?q='+escape(value, 'url')+'&country=&featureClass=P&continentCode=&username=**YOUR USER NAME HERE** &maxRows=1&featureCode='``
-> 6. Click `OK` and wait. 
+> 6. Click `OK` and wait.
+>
 {: .challenge}
 
 You should get a set of data that looks like this:
