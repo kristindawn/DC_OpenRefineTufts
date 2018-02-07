@@ -25,7 +25,7 @@ Combining columns is not as intuitive as you might expect it to be. We  are goin
 > 3. We want the text from the `City` column (value), the text from the `State` column, and a `, ` in between. Our expression is:
 >
 > >## Solution
-> > ``value  + ", " + cells["State"].value``
+> > ```value  + ", " + cells["State"].value```
 > {: .solution}
 >
 > 4. Leave the default `set to blank` if the process doesn't work. The preview should show `City, ST`. If it doesn't, check your expression.
@@ -49,7 +49,7 @@ One of the options in the `Edit column` menu is `Add column by fetching URLs...`
 > 3. **THIS IS VERY IMPORTANT** Change the `Throttle delay` from the default `5000` milliseconds to `200` milliseconds. If you don't do this, it will only ask for a data from a new row every **5 seconds**, instead pf 5 rows every second.
 > 4. Leave the `On error` on `set to blank`. GeoNames will also return its own errors.
 > 5. The expression you need is: 
-> ``'http://api.geonames.org/searchJSON?q='+escape(value, 'url')+'&country=&featureClass=P&continentCode=&username=**YOUR USER NAME HERE** &maxRows=1&featureCode='``
+> ```'http://api.geonames.org/searchJSON?q='+escape(value, 'url')+'&country=&featureClass=P&continentCode=&username=**YOUR USER NAME HERE** &maxRows=1&featureCode='```
 > 6. Click `OK` and wait.
 >
 {: .challenge}
@@ -67,13 +67,13 @@ As you can see, the data from GeoNames is structured using JSON. This makes it e
 > 3. We are going to use the JSON parsing (`value.parseJson().???`) functionality to create an expression to just get the latitude, stored as `lat` in the column. To do this, we need to tell OpenRefine that we are looking at the first (and only) `geonames` JSON entry for the row and that we want the `lat`. What might this look like?
 >
 > > ## Solution
-> > `value.parseJson().geonames[0].lat`
+> > ```value.parseJson().geonames[0].lat```
 > {: .solution}
 >
 > 4. Now you that you have the latitude, do the same thing for the longitude.
 >
 > > ## Solution
-> > `value.parseJson().geonames[0].lng`
+> > ```value.parseJson().geonames[0].lng```
 > {: .solution}
 >
 {: .challenge}
