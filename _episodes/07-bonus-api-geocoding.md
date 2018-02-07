@@ -57,5 +57,12 @@ You should get a set of data that looks like this:
 
 As you can see, the data from GeoNames is structured using JSON. This makes it easy to extract pieces from it using the language parsing capabilities in OpenRefine. This won't work for all kinds of structured data, but luckily JSON is on the list. You can find the functions in the GREL documentation on the [Other Functions](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Other-Functions) page. 
 
-> ## Excercise
->
+> ## Demonstration
+> 1. Click the down arrow in the GeoJSON column. Choose `Edit column` > `Add column based on this column`
+> 2. Call the new column `Latitude`. Leave the options below that box as `set to blank`.
+> 3. We are going to use the JSON parsing (`value.parseJson().???`) functionality to create an expression to just get the latitude, stored as `lat` in the column. To do this, we need to tell OpenRefine that we are looking at the first (and only) `geonames` JSON entry for the row and that we want the `lat`. What might this look like?
+> > ## Solution
+> > `value.parseJson().geonames[0].lat`
+> {: .solution}
+> 4. Now you that you have the latitude, do the same thing for the longitude.
+
