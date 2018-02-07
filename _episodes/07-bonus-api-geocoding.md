@@ -26,7 +26,7 @@ Combining columns is not as intuitive as you might expect it to be. We  are goin
 >
 > >## Solution
 > > ``value  + ", " + cells["State"].value``
-> >{: .solution}
+> {: .solution}
 >
 > 4. Leave the default `set to blank` if the process doesn't work. The preview should show `City, ST`. If it doesn't, check your expression.
 > 5. Click `OK` 
@@ -66,7 +66,12 @@ As you can see, the data from GeoNames is structured using JSON. This makes it e
 >
 > > ## Solution
 > > `value.parseJson().geonames[0].lat`
-> >{: .solution}
+> {: .solution}
 >
 > 4. Now you that you have the latitude, do the same thing for the longitude.
+>
+> > ## Solution
+> > `value.parseJson().geonames[0].lng`
+> {: .solution}
+>
 
