@@ -64,5 +64,7 @@ A few tips for using the `Edit cells` > `Transform...` window:
 > 6. Click `OK`. 
 {: .challenge}
 
-To clean up the rest of the list, please just go through the list and manually edit the `State` column until all of the states have their two letter code. Are there any codes there that give you trouble?
+If you want, you can use the Cluster tool to see if there are any matches. 
+
+To clean up the rest of the list, please just go through the list and manually edit the `State` column until all of the states have their two letter code. Are there any codes there that give you trouble? 
 
