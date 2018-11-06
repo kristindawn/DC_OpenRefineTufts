@@ -22,7 +22,7 @@ OpenRefine has its own web site with documentation and a book:
 * [OpenRefine web site](http://openrefine.org/)
 * [OpenRefine Documentation for Users](https://github.com/OpenRefine/OpenRefine/wiki/Documentation-For-Users)
 * [OpenRefine documentation Wiki site](https://github.com/OpenRefine/OpenRefine/wiki/Documentation-For-Users)
-* [Using OpenRefine]() book by Ruben Verborgh, Max De Wilde and Aniket Sawant
+* [Using OpenRefine](https://tufts.on.worldcat.org/search?queryString=no%3A+889271264#/oclc/889271264) book by Ruben Verborgh, Max De Wilde and Aniket Sawant
 * [OpenRefine history from Wikipedia](https://en.wikipedia.org/wiki/OpenRefine)
 
 In addition, see these other useful resources:
