@@ -22,15 +22,15 @@ keypoints:
 ## Creating a Project
 
 
-Start the program. (Double-click on the openrefine.exe file (the icon looks like a diamond). Java services will start on your machine, and OpenRefine will open in your browser).
+Start the program. (Double-click on the openrefine.exe file (the icon looks like a diamond). Java services will start on your machine and a command prompt window will pop up, and then OpenRefine will open in your browser).
 
 Launch OpenRefine (see [Getting Started with OpenRefine](http://www.datacarpentry.org/OpenRefine-ecology-lesson/00-getting-started/)).
 
 OpenRefine can import a variety of file types, including tab separated (`tsv`), comma separated (`csv`), Excel (`xls`, `xlsx`), JSON, XML, RDF as XML, Google Spreadsheets. See the [OpenRefine Importers page](https://github.com/OpenRefine/OpenRefine/wiki/Importers) for more information.
 
-In this first step, we'll browse our computer to the sample data file for this lesson. In this case, I have partially cleaned up a very simple dataset of Barnum and London Circus stops from 1881-1890. The original data I used can be found on the [Circus Historical Society Barnum Route from 1881-1890 page](http://www.circushistory.org/Routes/PTB1881.htm).
+In this first step, we'll get the sample data file for this lesson. In this case, I have partially cleaned up a very simple dataset of Barnum and London Circus stops from 1881-1890. The original data I used can be found on the [Circus Historical Society Barnum Route from 1881-1890 page](http://www.circushistory.org/Routes/PTB1881.htm).
 
-Instead of downloading the data, we are going to grab it straight from the CSV file that I put in my GitHub repository for this workshop. You can get a [preview of the data](https://github.com/kristindawn/DC_OpenRefineTufts/blob/gh-pages/files/PTB1881_wyear.csv) in GitHub. Take a look and see if you notice anything specific about the data. When you are ready, the URL for the dataset that we are going to copy into OpenRefine is: ```https://raw.githubusercontent.com/kristindawn/DC_OpenRefineTufts/gh-pages/files/PTB1881_wyear.csv```
+Instead of downloading the CSV file with the data, we are going to grab it straight from my GitHub repository for this workshop. You can get a [preview of the data](https://github.com/kristindawn/DC_OpenRefineTufts/blob/gh-pages/files/PTB1881_wyear.csv) in GitHub. Take a look and see if you notice anything specific about the data. When you are ready, the URL for the dataset that we are going to copy into OpenRefine is: ```https://raw.githubusercontent.com/kristindawn/DC_OpenRefineTufts/gh-pages/files/PTB1881_wyear.csv```
 
 
 Once OpenRefine is launched in your browser, the left margin has options to `Create Project`, `Open Project`, or `Import Project`. Here we will create a new project:
@@ -95,7 +95,7 @@ along with a number representing how many times that value occurs in the column.
 If data in a column needs to be split into multiple columns, and the parts are separated by a common separator (say a comma or a space), you can use that separator to divide up the pieces into their own columns.
 
 
-1. We want to split the `Route Date` column into separate colums for the date and the location using the space after the date as the separator. 
+We want to split the `Route Date` column into separate colums for the date and the location using the space after the date as the separator. 
 
 **What could go wrong with this?** 
 
@@ -103,11 +103,11 @@ If data in a column needs to be split into multiple columns, and the parts are s
 > Some of the place names, like "New York" have a space in the name of the city. If we let OpenRefine split it _without_ indicating how many >columns we want, it will split it as many times as it can. Since we know we only want it to split it into two columns, the date and the >place, we can indicated that before we ask it to split it.
 {: .solution}
 
-2. Click the down arrow at the top of the `Route Date` column. Choose `Edit Column` > `Split into several columns...`
-3. In the pop-up, in the `Separator` box, replace the comma with a space. 
-4. Where it says `Split into`, type in 2; this will limit the number of columns to 2 instead of as many as OpenRefine can make.
-5. **Uncheck the box that says `Remove this column`.** This will leave the original column. It is always good to have this information to go back to.
-6. Click `OK`. You'll get two new columns called `Route Date 1` and `Route Date 2`. 
+1. Click the down arrow at the top of the `Route Date` column. Choose `Edit Column` > `Split into several columns...`
+2. In the pop-up, in the `Separator` box, replace the comma with a space. 
+3. Where it says `Split into`, type in 2; this will limit the number of columns to 2 instead of as many as OpenRefine can make.
+4. **Uncheck the box that says `Remove this column`.** This will leave the original column. It is always good to have this information to go back to.
+5. Click `OK`. You'll get two new columns called `Route Date 1` and `Route Date 2`. 
 
 **What do you notice about the new columns?**
 
