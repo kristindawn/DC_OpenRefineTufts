@@ -36,6 +36,8 @@ Which means that this file contains multiple files. You can double-click on the 
 folder icon will now appear. 
 3. Look at the files that appear in this folder. What files are here? What information do you think these files contain?
 
+**PRO TIP:** On Windows computers you can view what is in the compressed file without actually extracting it. You probably won't be able to use it until you extract the files. Mac OS automatically takes all of the files out the compressed folder.
+
 > ## Solution
 > You should see:
 > - a  `history` folder which contains three `zip` files. Each of these files itself contains a `change.txt` file. 
