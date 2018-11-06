@@ -1,6 +1,6 @@
 ---
 title: "Working with OpenRefine"
-teaching: 10
+teaching: 5
 exercises: 10
 questions:
 - "How can we bring our data into OpenRefine?"
