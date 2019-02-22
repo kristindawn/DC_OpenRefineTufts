@@ -15,8 +15,6 @@ keypoints:
 - "Transforms, common or written by us, are a powerful way to edit lots of data at once."
 ---
 
-# Lesson
-
 ## Common Transforms.
 
 ### Whitespace
