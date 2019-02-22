@@ -12,7 +12,6 @@ objectives:
 keypoints:
 - "OpenRefine and the GeoNames API can be combined to do basic geocoding."
 ---
-# Lesson
 
 ## Combine columns
 
