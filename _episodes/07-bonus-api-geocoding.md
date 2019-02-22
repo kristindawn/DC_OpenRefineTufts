@@ -70,7 +70,7 @@ As you can see, the data from GeoNames is structured using JSON. This makes it e
 > > ```value.parseJson().geonames[0].lat```
 > {: .solution}
 >
-> 4. Now you that you have the latitude, do the same thing for the longitude.
+> Now you that you have the latitude, do the same thing for the longitude.
 >
 > > ## Solution
 > > ```value.parseJson().geonames[0].lng```
