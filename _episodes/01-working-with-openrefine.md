@@ -17,8 +17,6 @@ keypoints:
 - "Faceting and clustering approaches can identify errors or outliers in data."
 ---
 
-# Lesson
-
 ## Creating a Project
 
 
@@ -67,7 +65,7 @@ along with a number representing how many times that value occurs in the column.
 
 >## Solution
 >
-> There will be one year where June is incorrectly abbreviated as Jun and one misspelling of October. In the end, there should be 8 months >in the facet - April through November.   
+> There will be one year where June is incorrectly abbreviated as Jun and one misspelling of October. In the end, there should be 8 months in the facet - April through November.   
 {: .solution}
 
 >## Exercise
@@ -84,7 +82,7 @@ along with a number representing how many times that value occurs in the column.
 > >format by doing `Edit cells` > `Common transforms` > `To number`. Doing `Facet` > `Numeric facet` creates a box in the left panel that
 > >shows a histogram of the number of entries per year. Notice that the data is shown as a number, not a date.
 > >DO NOT DO THIS BUT: If you instead transform the column to a date, the program will assume all entries are on January 1st of the year.   
-> > 3. After creating a facet, click `Sort by count` in the facet box. The year with the most observations is 1997. The least is 1977. 
+> > 3. After creating a facet, click `Sort by count` in the facet box. The years with the most observations are 1881 and 1887. The least is 1883. 
 > > 
 > {: .solution}
 {: .challenge}
